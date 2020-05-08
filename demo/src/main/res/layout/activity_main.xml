@@ -3,169 +3,128 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/black">
+    android:layout_height="match_parent">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="com.rokid.glass.ui.sample.MainActivity">
 
-        <TextView
-            android:id="@+id/glass_info"
+        <Button
+            android:id="@+id/test_btn"
+            style="@style/Text.NormalLight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
-            android:textSize="30sp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="Type"
+            android:textAllCaps="false"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.rokid.glass.ui.button.GlassButton
-            android:id="@+id/alignment_btn"
-            style="@style/NormalGlassButton"
-            android:layout_width="260dp"
+        <TextView
+            android:id="@+id/glass_info"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:textColor="@color/common_c1_text_color"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/test_btn" />
+
+        <LinearLayout
+            android:id="@+id/glass_gbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/glass_info">
+
+            <com.rokid.glass.ui.widget.button.GlassRoundImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                app:focused_src="@mipmap/ic_right"
+                app:unfocused_src="@mipmap/ic_right_unfocused"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/glass_gtbn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/glass_gbtn">
+
+            <com.rokid.glass.ui.widget.button.GlassRoundImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:focused_src="@mipmap/ic_delete"
+                app:unfocused_src="@mipmap/ic_delete_unfocused" />
+
+        </LinearLayout>
+
+        <com.rokid.glass.ui.button.GlassButton
+            android:id="@+id/font_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:focusable="true"
-            android:text="@string/alignment"
-            android:textAllCaps="false"
-            app:layout_constraintLeft_toLeftOf="@id/glass_info"
-            app:layout_constraintRight_toRightOf="@id/glass_info"
-            app:layout_constraintTop_toBottomOf="@id/glass_info" />
+            android:text="高亮"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/glass_gtbn1" />
 
         <com.rokid.glass.ui.button.GlassButton
             android:id="@+id/notification_btn"
-            style="@style/NormalGlassButton"
-            android:layout_width="260dp"
+            style="@style/Text.LargeLight"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:focusable="true"
             android:text="@string/sample_notification"
-            android:textAllCaps="false"
-            app:layout_constraintLeft_toLeftOf="@id/alignment_btn"
-            app:layout_constraintRight_toRightOf="@id/alignment_btn"
-            app:layout_constraintTop_toBottomOf="@id/alignment_btn" />
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/font_btn" />
 
         <com.rokid.glass.ui.button.GlassButton
-            android:id="@+id/simple_voice_btn"
-            style="@style/NormalGlassButton"
-            android:layout_width="260dp"
+            android:id="@+id/dialog_btn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/sample_voice"
-            android:textAllCaps="false"
-            app:layout_constraintLeft_toLeftOf="@id/notification_btn"
+            android:text="Dialog"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/notification_btn" />
 
-
         <com.rokid.glass.ui.button.GlassButton
-            android:id="@+id/image_btn"
-            style="@style/NormalGlassButton"
-            android:layout_width="260dp"
+            android:id="@+id/custom_dialog_btn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/sample_voice_image"
-            android:textAllCaps="false"
-            app:layout_constraintLeft_toLeftOf="@id/simple_voice_btn"
-            app:layout_constraintTop_toBottomOf="@id/simple_voice_btn" />
+            android:text="Custom Dialog"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dialog_btn" />
 
-        <com.rokid.glass.ui.button.GlassButton
-            android:id="@+id/simple_message_btn"
-            style="@style/NormalGlassButton"
-            android:layout_width="260dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/sample_title"
-            android:textAllCaps="false"
-            app:layout_constraintLeft_toLeftOf="@id/image_btn"
-            app:layout_constraintTop_toBottomOf="@id/image_btn" />
-
-        <com.rokid.glass.ui.button.GlassButton
-            android:id="@+id/simple_content_btn"
-            style="@style/NormalGlassButton"
-            android:layout_width="260dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/sample_content"
-            android:textAllCaps="false"
-            app:layout_constraintLeft_toLeftOf="@id/simple_message_btn"
-            app:layout_constraintTop_toBottomOf="@id/simple_message_btn" />
-
-        <com.rokid.glass.ui.button.GlassButton
-            android:id="@+id/image_content_btn"
-            style="@style/NormalGlassButton"
-            android:layout_width="260dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/sample_image_content"
-            android:textAllCaps="false"
-            app:layout_constraintLeft_toLeftOf="@id/simple_content_btn"
-            app:layout_constraintTop_toBottomOf="@id/simple_content_btn" />
-
-        <com.rokid.glass.ui.button.GlassButton
-            android:id="@+id/customer_message_btn"
-            style="@style/NormalGlassButton"
-            android:layout_width="260dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/customer_content"
-            android:textAllCaps="false"
-            app:layout_constraintLeft_toLeftOf="@id/image_content_btn"
-            app:layout_constraintTop_toBottomOf="@id/image_content_btn" />
-
-        <com.rokid.glass.ui.button.GlassButton
-            android:id="@+id/customer_voice_btn"
-            style="@style/NormalGlassButton"
-            android:layout_width="260dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/customer_voice"
-            android:textAllCaps="false"
-            app:layout_constraintLeft_toLeftOf="@id/customer_message_btn"
-            app:layout_constraintTop_toBottomOf="@id/customer_message_btn" />
-
-        <com.rokid.glass.ui.button.GlassButton
-            android:id="@+id/customer_image_btn"
-            style="@style/NormalGlassButton"
-            android:layout_width="260dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/customer_image1"
-            android:textAllCaps="false"
-            app:layout_constraintLeft_toLeftOf="@id/customer_voice_btn"
-            app:layout_constraintTop_toBottomOf="@id/customer_voice_btn" />
-
-        <com.rokid.glass.ui.button.GlassButton
-            android:id="@+id/customer_image_content_btn"
-            style="@style/NormalGlassButton"
-            android:layout_width="260dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/customer_image2"
-            android:textAllCaps="false"
-            app:layout_constraintLeft_toLeftOf="@id/customer_image_btn"
-            app:layout_constraintTop_toBottomOf="@id/customer_image_btn" />
         <com.rokid.glass.ui.button.GlassButton
             android:id="@+id/simple_toast"
-            style="@style/NormalGlassButton"
-            android:layout_width="260dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:text="@string/glassui_toast_test"
-            android:textAllCaps="false"
-            app:layout_constraintLeft_toLeftOf="@id/customer_image_content_btn"
-            app:layout_constraintTop_toBottomOf="@id/customer_image_content_btn" />
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/custom_dialog_btn" />
 
         <com.rokid.glass.ui.button.GlassButton
             android:id="@+id/auto_size_btn"
-            style="@style/NormalGlassButton"
-            android:layout_width="260dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:text="AutoSize"
-            android:textAllCaps="false"
-            app:layout_constraintLeft_toLeftOf="@id/simple_toast"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/simple_toast" />
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
