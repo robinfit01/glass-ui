@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 new GlassDialog.CommonDialogBuilder(this)
                         .setTitle("我是很长我是很长我是很" +
                                 "长我是很长我是很长我是很长我是很长我是很长")
+                        .setContent("Content")
                         .setConfirmText("确定按钮")
                         .setCancelText("次级按钮")
                         .setConfirmListener(new GlassDialogListener() {
