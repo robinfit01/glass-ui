@@ -120,4 +120,20 @@
         <item name="android:textColor">@color/common_text_color</item>
         <item name="android:textSize">@dimen/glass_common_small_text_size</item>
     </style>
+
+    <style name="GlassAppTheme" parent="GlassTheme.AppCompat.Light.NoActionBar.FullScreen">
+        <!--        <item name="android:windowContentTransitions">true</item>-->
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:windowEnterTransition">@transition/explode_glass</item>
+        <item name="android:windowExitTransition">@transition/explode_glass</item>
+        <item name="android:windowReenterTransition">@transition/explode_glass</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="GlassTheme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
 </resources>
