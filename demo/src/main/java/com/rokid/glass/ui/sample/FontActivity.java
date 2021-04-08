@@ -4,9 +4,10 @@ import android.content.Context;
 import android.graphics.Paint;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.rokid.glass.ui.util.Utils;
 

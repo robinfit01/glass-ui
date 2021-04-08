@@ -1,9 +1,11 @@
 package com.rokid.glass.ui.sample;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+//import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.rokid.glass.imusdk.core.IMUView;
 import com.rokid.glass.ui.sample.adapter.IMUImageAdapter;
@@ -46,7 +48,7 @@ public class IMUActivity extends AppCompatActivity {
     private void initData() {
         mItems = new ArrayList<>();
         for (int i = 0; i < resId.length; i++) {
-            mItems.add(new IMUImageItem().setResId(resId[i]).setName("姓名" + i));
+            mItems.add(new IMUImageItem().setResId(resId[i]).setName("Name" + i));
         }
 
         mAdapter.setData(mItems);

@@ -3,7 +3,7 @@ package com.rokid.glass.ui.sample;
 import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
@@ -67,8 +67,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.custom_dialog_btn:
                 new GlassDialog.CommonDialogBuilder(this)
                         .setTitle("Custom Content")
-                        .setConfirmText("确定")
-                        .setCancelText("取消")
+                        .setConfirmText("Confirm")
+                        .setCancelText("Cancel")
                         .setContentLayoutId(R.layout.layout_custom_dialog_content)
                         .show();
                 break;

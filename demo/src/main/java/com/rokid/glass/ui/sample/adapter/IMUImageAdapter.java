@@ -1,9 +1,11 @@
 package com.rokid.glass.ui.sample.adapter;
 
-import android.support.annotation.NonNull;
+//import androidx.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.annotation.NonNull;
 
 import com.rokid.glass.imusdk.core.ui.recyclerview.BaseAdapter;
 import com.rokid.glass.imusdk.core.ui.recyclerview.BaseViewHolder;
