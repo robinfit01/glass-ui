@@ -144,6 +144,16 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/imuview_btn" />
+
+        <com.rokid.glass.ui.button.GlassButton
+            android:id="@+id/infinitiview_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="InfinityView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/handcontrol_btn" />
     </android.support.constraint.ConstraintLayout>
+
 </ScrollView>
 

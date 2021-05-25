@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.auto_size_btn).setOnClickListener(this);
         findViewById(R.id.imuview_btn).setOnClickListener(this);
         findViewById(R.id.handcontrol_btn).setOnClickListener(this);
+        findViewById(R.id.infinitiview_btn).setOnClickListener(this);
+
 
         mGlassInfoTv = findViewById(R.id.glass_info);
         mGlassInfoTv.setText(RokidSystem.getHardwareVersion());
@@ -83,6 +85,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.handcontrol_btn:
                 startActivity(new Intent(this, HandControlActivity.class));
+                break;
+            case R.id.infinitiview_btn:
+                startActivity(new Intent(this, InfinityActivity.class));
                 break;
         }
     }

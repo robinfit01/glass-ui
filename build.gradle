@@ -16,6 +16,7 @@ buildscript {
         // Remove it if you won't to publish SNAPSHOT version.
         classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.5.4"
 
+
 //        classpath 'com.rokid.build:gradle-plugin:1.3.5'
 //        classpath 'com.novoda:bintray-release:0.9'
     }
@@ -33,6 +34,7 @@ allprojects {
 
         maven {
             url 'https://dl.bintray.com/rokidglass/maven'
+            maven { url 'https://maven.rokid.com/repository/maven-public/' }
         }
     }
 }
