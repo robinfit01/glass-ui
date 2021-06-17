@@ -34,34 +34,34 @@ rokid {
     maven {
         groupId = "com.rokid.glass"
         artifactId = "ui" // module
-        version = "1.6.3"
+        version = "1.6.4"
 
-        // Release
         repository {
-            url = "http://mvnrepo.rokid-inc.com/nexus/content/repositories/releases/"
-            sourcesJar = false
-            javadocJar = false
-        }
+            url = 'https://maven.rokid.com/repository/maven-releases/'
 
-        // Snapshot
-        snapshotRepository {
-            url = 'http://mvnrepo.rokid-inc.com/nexus/content/repositories/snapshots/'
             sourcesJar = true
             javadocJar = false
         }
 
-        // bintray
-        bintray {
-            repo = "maven"
-            userOrg = "rokidglass" // 组织名
-            name = "GlassUI"
-            desc = 'Glass UI'
-            websiteUrl = "https://www.rokid.com"
-            vcsUrl = "https://www.rokid.com"
+        snapshotRepository {
+            url = 'https://maven.rokid.com/repository/maven-snapshots'
 
-            sourcesJar = false
+            sourcesJar = true
             javadocJar = false
         }
+
+//        // bintray
+//        bintray {
+//            repo = "maven"
+//            userOrg = "rokidglass" // 组织名
+//            name = "GlassUI"
+//            desc = 'Glass UI'
+//            websiteUrl = "https://www.rokid.com"
+//            vcsUrl = "https://www.rokid.com"
+//
+//            sourcesJar = false
+//            javadocJar = false
+//        }
     }
 }
 

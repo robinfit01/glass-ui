@@ -29,11 +29,8 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven { url 'http://mvnrepo.rokid-inc.com/nexus/content/groups/public/' }
-
-        maven {
-            url 'https://dl.bintray.com/rokidglass/maven'
-        }
+        maven { url 'https://maven.rokid.com/repository/maven-snapshots/' }
+        maven { url 'https://maven.rokid.com/repository/maven-public/' }
     }
 }
 
