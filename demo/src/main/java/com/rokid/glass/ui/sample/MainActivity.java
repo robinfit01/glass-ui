@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .setTitle("Custom Content")
                         .setConfirmText("确定")
                         .setCancelText("取消")
+                        .setCenterVertical(false)
                         .setContentLayoutId(R.layout.layout_custom_dialog_content)
                         .show();
                 break;

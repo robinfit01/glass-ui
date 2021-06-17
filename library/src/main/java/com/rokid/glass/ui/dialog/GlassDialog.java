@@ -16,6 +16,8 @@ import android.view.ViewGroup;
 import android.view.ViewStub;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.rokid.glass.ui.R;
@@ -98,6 +100,7 @@ public class GlassDialog extends Dialog {
         private GlassButton mConfirmBtn;
         private GlassButton mCancelBtn;
         private ViewStub mCustomContent;
+        private LinearLayout mParentLinearlayout;
 
         private String mTitle;
         protected String mConfirmText;
@@ -105,6 +108,7 @@ public class GlassDialog extends Dialog {
         protected String mContent;
         protected int mContentLayoutId;
         protected View mContentLayoutView;
+        private boolean centerVertical = true;
 
         protected GlassDialogListener mConfirmListener;
         protected GlassDialogListener mCancelListener;
@@ -126,6 +130,7 @@ public class GlassDialog extends Dialog {
             mConfirmBtn = view.findViewById(R.id.dialog_confirm);
             mCancelBtn = view.findViewById(R.id.dialog_cancel);
             mCustomContent = view.findViewById(R.id.dialog_custom_content);
+            mParentLinearlayout = view.findViewById(R.id.ll_parent);
 
             mDialogTitleTv.setText(mTitle);
             if (!TextUtils.isEmpty(mConfirmText)) {
@@ -137,6 +142,10 @@ public class GlassDialog extends Dialog {
                 mDialogContentTv.setText(mContent);
             } else {
                 mDialogContentTv.setVisibility(View.GONE);
+            }
+
+            if (!centerVertical) {
+                mParentLinearlayout.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.TOP);
             }
 
             if (mContentLayoutId != 0) {
@@ -231,6 +240,11 @@ public class GlassDialog extends Dialog {
 
         public CommonDialogBuilder setContentLayoutView(View contentLayoutView) {
             this.mContentLayoutView = contentLayoutView;
+            return this;
+        }
+
+        public CommonDialogBuilder setCenterVertical(boolean centerVertical) {
+            this.centerVertical = centerVertical;
             return this;
         }
     }
